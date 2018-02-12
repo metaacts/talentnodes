@@ -1,0 +1,11 @@
+// file: custom.scss
+
+// Overrides
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.w-20 {
+    width: 20% !important;
+}
+#how-it-works img {
+    height: 150px;
+}
