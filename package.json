@@ -1,5 +1,5 @@
 {
-  "name": "bootnode",
+  "name": "bootnodes",
   "version": "1.0.0",
   "description": "A standard bootstrap 4 theme development workflow: following community suggested best practices using sass, npm, gulp, gulp plugins",
   "main": "index.html",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ekram-syed/bootnode.git"
+    "url": "git+https://github.com/ekram-syed/bootnodes.git"
   },
   "keywords": [
     "bootstrap",
@@ -22,9 +22,9 @@
   "author": "Syed Ekram Uddin Emon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ekram-syed/bootnode/issues"
+    "url": "https://github.com/ekram-syed/bootnodes/issues"
   },
-  "homepage": "https://github.com/ekram-syed/bootnode#readme",
+  "homepage": "https://github.com/ekram-syed/bootnodes#readme",
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "browser-sync": "^2.23.6",
@@ -33,6 +33,7 @@
     "gulp-html-minifier": "^0.1.8",
     "gulp-imagemin": "^4.1.0",
     "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0"
