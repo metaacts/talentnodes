@@ -9,36 +9,123 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/main.min.css">
 
-  <title>Hello, world!</title>
+  <title>Talent Nodes</title>
+
+  <!-- Favicons && Device Icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ico/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
 </head>
 
 <body>
-
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Talent Hub</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <!-- Header:Start -->
+  <header id="header">
+    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img class="w-20" src="img/logo-grey.png" alt="talent nodes logo"> Talent Hub
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-      </button>
+        </button>
 
-      <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarSupportedContent">
-        <button type="button" class="btn btn-outline-primary">Join</button>
-        <button type="button" class="btn btn-outline-secondary  mr-2">SingIn</button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarToggleContent">
+          <div class="navbar-nav">
+            <a href="#" class="nav-link btn btn-outline-primary ml-1 py-1 px-3">Join</a>
+            <a href="#" class="nav-item btn btn-outline-secondary ml-1 py-1 px-3">SingIn</a>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
+  <!-- Header:End -->
 
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">Album example</h1>
-      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-      <p>
-        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-      </p>
+  <!-- Main:Start -->
+  <main>
+
+    <!-- Main:Section Jumborton:Start -->
+    <section id="login">
+      <div class="container my-5">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <h2>
+              login
+            </h2>
+            <form class="form-signin">
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+              <hr>
+              <button class="btn btn-lg btn-outline-secondary btn-block" type="submit">Sign in with google</button>
+              <button class="btn btn-lg btn-outline-primary btn-block" type="submit">Sign in with facebook</button>
+              <button class="btn btn-lg btn-outline-primary btn-block" type="submit">Sign in with linkedin</button>
+            </form>
+          </div>
+        </div>
+    </section>
+    <!-- Main:Section Jumborton:End -->
+  </main>
+  <!-- Main:End -->
+  <footer id="footer" class="container border-top">
+    <div class="row">
+      <div class="col-md-3">
+        <a class="navbar-brand py-3" href="#">
+          <img class="w-20" src="img/logo-grey.png" alt="talent nodes logo"> Talent Hub
+        </a>
+
+      </div>
+      <div class="col-md-3">
+        <h6>Company</h6>
+        <ul class="list-group-flush p-0">
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Support</h6>
+        <ul class="list-group-flush p-0">
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Community</h6>
+        <ul class="list-group-flush p-0">
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
     </div>
-  </section>
-
+  </footer>
   <!-- JavaScript -->
   <script src="js/main.min.js"></script>
 </body>
