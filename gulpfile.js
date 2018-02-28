@@ -3,7 +3,8 @@ var gulp = require('gulp'),                         // https://www.npmjs.com/pac
     browserSync = require('browser-sync').create(), // https://www.npmjs.com/package/browser-sync
     sass = require('gulp-sass'),                    // https://www.npmjs.com/package/gulp-sass
     autoprefixer = require('autoprefixer'),         // https://www.npmjs.com/package/autoprefixer
-    sourcemaps = require('gulp-sourcemaps'),        // https://www.npmjs.com/package/gulp-sourcemaps
+    merge = require('merge-stream');                // https://www.npmjs.com/package/merge-stream
+sourcemaps = require('gulp-sourcemaps'),        // https://www.npmjs.com/package/gulp-sourcemaps
     postcss = require('gulp-postcss'),              // https://www.npmjs.com/package/gulp-postcss
     uglify = require('gulp-uglify'),                // https://www.npmjs.com/package/gulp-uglify
     imagemin = require('gulp-imagemin'),            // https://www.npmjs.com/package/gulp-imagemin
@@ -16,6 +17,7 @@ var srcPaths = {
     root: 'src/',
     imgDir: 'src/img/',
     sassDir: 'src/scss/',
+    sassDir: 'src/css/', // place for vendor
     jsDir: 'src/js/',
     iconDir: 'src/ico/',
     fontDir: 'src/webfont/',
@@ -58,8 +60,19 @@ gulp.task('font', function () {
         .pipe(gulp.dest(buildPaths.fontDir))
         .pipe(browserSync.stream()); // browser-sync
 });
-// Process SASS to CSS
+// Process SASS to CSS, and Merge static CSS
 gulp.task('sass', function () {
+
+    var sassStream, vendorCssStream;
+
+    // sassStream = gulp.src(srcPaths.sassDir + '**/*.scss')
+    //     .pipe(sourcemaps.init())
+    //     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    //     //.pipe(postcss([autoprefixer()]));
+    //     .pipe(sourcemaps.write('.'));
+    
+    //     vendorCssStream = gulp.src(srcPaths.cssDir + '**/*.css')
+
     return gulp.src(srcPaths.sassDir + '**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
