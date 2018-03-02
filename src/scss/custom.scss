@@ -1,11 +1,8 @@
 // file: custom.scss
-
+$body-bg: #EAECED;
 // Overrides
 @import "node_modules/bootstrap/scss/bootstrap";
 
 .w-20 {
-    width: 20% !important;
-}
-#how-it-works img {
-    height: 150px;
+    width: 20%
 }

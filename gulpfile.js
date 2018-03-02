@@ -3,24 +3,24 @@ var gulp = require('gulp'),                         // https://www.npmjs.com/pac
     browserSync = require('browser-sync').create(), // https://www.npmjs.com/package/browser-sync
     sass = require('gulp-sass'),                    // https://www.npmjs.com/package/gulp-sass
     autoprefixer = require('autoprefixer'),         // https://www.npmjs.com/package/autoprefixer
-    merge = require('merge-stream');                // https://www.npmjs.com/package/merge-stream
-sourcemaps = require('gulp-sourcemaps'),        // https://www.npmjs.com/package/gulp-sourcemaps
+//    sourcemaps = require('gulp-sourcemaps'),        // https://www.npmjs.com/package/gulp-sourcemaps
     postcss = require('gulp-postcss'),              // https://www.npmjs.com/package/gulp-postcss
     uglify = require('gulp-uglify'),                // https://www.npmjs.com/package/gulp-uglify
     imagemin = require('gulp-imagemin'),            // https://www.npmjs.com/package/gulp-imagemin
     htmlmin = require('gulp-html-minifier'),        // https://www.npmjs.com/package/gulp-html-minifier
     rename = require('gulp-rename'),                // https://www.npmjs.com/package/gulp-html-minifier
-    concat = require('gulp-concat');                // https://www.npmjs.com/package/gulp-concat
+    concat = require('gulp-concat'),                // https://www.npmjs.com/package/gulp-concat
+    merge = require('merge-stream');
 
-// Source directory names, Change according to your source.   
+// Source directory names, Change according to your file structure choice.   
 var srcPaths = {
-    root: 'src/',
-    imgDir: 'src/img/',
-    sassDir: 'src/scss/',
-    sassDir: 'src/css/', // place for vendor
-    jsDir: 'src/js/',
-    iconDir: 'src/ico/',
-    fontDir: 'src/webfont/',
+    root: 'src/',                                   // source root
+    imgDir: 'src/img/',                             // static image resources
+    sassDir: 'src/scss/',                           // saas files
+    cssDir: 'src/css/',                             // place for vendor CSS files
+    jsDir: 'src/js/',                               // js sources
+    iconDir: 'src/ico/',                            // icon assets
+    fontDir: 'src/webfonts/',                       // webfonts 
 }
 // Distribute / Build directory names, Change according to your needs.   
 var buildPaths = {
@@ -29,7 +29,7 @@ var buildPaths = {
     cssDir: 'dist/css/',
     jsDir: 'dist/js/',
     iconDir: 'dist/ico/',
-    fontDir: 'dist/webfont/',
+    fontDir: 'dist/webfonts/',
 }
 // Copy minify .html templates
 gulp.task('template', function () {
@@ -65,22 +65,17 @@ gulp.task('sass', function () {
 
     var sassStream, vendorCssStream;
 
-    // sassStream = gulp.src(srcPaths.sassDir + '**/*.scss')
-    //     .pipe(sourcemaps.init())
-    //     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    //     //.pipe(postcss([autoprefixer()]));
-    //     .pipe(sourcemaps.write('.'));
-    
-    //     vendorCssStream = gulp.src(srcPaths.cssDir + '**/*.css')
-
-    return gulp.src(srcPaths.sassDir + '**/*.scss')
-        .pipe(sourcemaps.init())
+    sassStream = gulp.src(srcPaths.sassDir + '**/*.scss')
+        //.pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(postcss([autoprefixer()]))
+        //.pipe(sourcemaps.write('.'));
+
+    vendorCssStream = gulp.src(srcPaths.cssDir + '**/*.css');
+    return merge(sassStream, vendorCssStream)
         .pipe(concat('main.min.css'))
-        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(buildPaths.cssDir))
-        .pipe(browserSync.stream()); // browser-sync
+        .pipe(browserSync.stream())
 });
 // Process JS files
 gulp.task('js', function () {
@@ -89,10 +84,10 @@ gulp.task('js', function () {
         'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
         srcPaths.jsDir + '**/*.js'
     ])
-        .pipe(sourcemaps.init())
+    //    .pipe(sourcemaps.init())
         .pipe(concat('main.min.js'))
         .pipe(uglify())
-        .pipe(sourcemaps.write('.'))
+    //    .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(buildPaths.jsDir))
         .pipe(browserSync.stream());
 });

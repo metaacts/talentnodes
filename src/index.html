@@ -32,13 +32,13 @@
 
 </head>
 
-<body>
+<body class="pt-5 mt-3">
   <!-- Header:Start -->
   <header id="header">
-    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+    <nav class="navbar navbar-expand-md fixed-top bg-light border-bottom">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img class="w-20" src="img/logo-grey.png" alt="talent nodes logo"> Live Masters
+          <img class="w-20" src="img/logo.png" alt="talent nodes logo"> Live Masters
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleContent" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -47,8 +47,10 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarToggleContent">
           <div class="navbar-nav">
-            <a href="#" class="nav-link btn btn-outline-primary ml-1 py-1 px-3">Join</a>
-            <a href="#" class="nav-item btn btn-outline-secondary ml-1 py-1 px-3">SingIn</a>
+            <a href="#" class="nav-link btn btn-outline-primary ml-1 py-1 px-3">
+              <i class="fas fa-user-plus"></i> Join</a>
+            <a href="#" class="nav-item btn btn-outline-secondary ml-1 py-1 px-3">
+              <i class="fas fa-sign-in-alt"></i> SingIn</a>
           </div>
         </div>
       </div>
@@ -58,23 +60,25 @@
 
   <!-- Main:Start -->
   <main>
-
     <!-- Main:Section Jumbotron:Start -->
-    <section id="hero" class="jumbotron text-center">
+    <section id="hero" class="jumbotron text-center rounded-0 mb-0">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 align-middle">
+          <div class="col-md-6 align-middle text-left">
             <h2 class="jumbotron-heading">
-              The convenient & fast way to get things done with the LIVE touch of Experts
+              The convenient and fast way to get things done with the LIVE touch of Experts
             </h2>
             <p class="lead text-muted my-5">
               Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too
               short so folks don't simply skip over it entirely. Getting a quick job done has never been easier
             </p>
             <p class="my-5">
-              <a href="#" class="btn btn-outline-primary my-2">Get Stated</a>
-              <a href="#" class="btn btn-outline-info my-2">Learn More</a>
-              <a href="#" class="btn btn-outline-success my-2">Im an Expert</a>
+              <a href="#" class="btn btn-outline-primary my-2">
+                <i class="fas fa-user-plus"></i> Get Stated</a>
+              <a href="#" class="btn btn-outline-info my-2">
+                <i class="fas fa-book"></i> Learn More</a>
+              <a href="#" class="btn btn-outline-success my-2">
+                <i class="fas fa-graduation-cap"></i> Im an Expert</a>
             </p>
           </div>
           <div class="col">
@@ -82,85 +86,107 @@
           </div>
         </div>
     </section>
-    <!-- Main:Section Jumborton:End -->
+    <!-- Main:Section Jumbotron:End -->
 
-    <section id="featured-categories" class="container pt-3 pb-5">
-      <h2 class="text-center">Find someone perfect for your needs</h2>
-      <div class="input-group my-3">
-        <input type="text" class="form-control border-primary" placeholder="What do you need to get done?" aria-label="Recipient's username" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-outline-primary" type="button">Search</button>
+    <section id="featured-categories">
+      <div class="container py-5 border-top">
+        <h2 class="text-center">Find someone perfect for your needs</h2>
+        <div class="input-group my-3">
+          <input type="text" class="form-control border-secondary" placeholder="What do you need to get done?" aria-label="Recipient's username"
+            aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">
+              <i class="fas fa-search"></i> Search</button>
+          </div>
         </div>
-      </div>
-      <h5>Whats popular</h5>
-      <div class="card-columns">
-        <a href="#" class="card list-group-item-action border-secondary ">
-          <div class="card-body">
-            <h5 class="card-title"> Guitar</h5>
-            <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-        <a href="#" class="card list-group-item-action border-secondary">
-          <div class="card-body">
-            <h5 class="card-title"> Chainies</h5>
-            <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-        <a href="#" class="card list-group-item-action border-secondary ">
-          <div class="card-body">
-            <h5 class="card-title"> Math</h5>
-            <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-        <a href="#" class="card list-group-item-action border-secondary ">
-          <div class="card-body">
-            <h5 class="card-title"> Yoga</h5>
-            <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-        <a href="#" class="card list-group-item-action border-secondary">
-          <div class="card-body">
-            <h5 class="card-title"> Cooking</h5>
-            <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-        <a href="#" class="card list-group-item-action border-secondary">
-          <div class="card-body">
-            <h5 class="card-title"> Piano</h5>
-            <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-        <a href="#" class="card list-group-item-action border-secondary">
-          <div class="card-body">
-            <h5 class="card-title"> Singing</h5>
-            <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-        <a href="#" class="card list-group-item-action border-secondary">
-          <div class="card-body">
-            <h5 class="card-title"> Drawing</h5>
-            <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-        <a href="#" class="card list-group-item-action border-secondary">
-          <div class="card-body">
-            <h5 class="card-title"> Care</h5>
-            <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-      </div>
+        <h3>Whats popular</h3>
+        <div class="card-columns">
+          <a href="#" class="card text-center list-group-item-action border-light ">
+            <div class="card-body">
+              <h5 class="card-title"> Guitar</h5>
+              <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
+              <p class="card-text">
+                <img src="img/guitar.png">
+              </p>
+            </div>
+          </a>
+          <a href="#" class="card text-center list-group-item-action border-light">
+            <div class="card-body">
+              <h5 class="card-title"> Chainies</h5>
+              <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
+              <p class="card-text">
+                <img src="img/translator.png">
+              </p>
+            </div>
+          </a>
+          <a href="#" class="card text-center list-group-item-action border-light ">
+            <div class="card-body">
+              <h5 class="card-title"> Math</h5>
+              <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
+              <p class="card-text">
+                <img src="img/maths.png">
+              </p>
+            </div>
+          </a>
+          <a href="#" class="card text-center list-group-item-action border-light ">
+            <div class="card-body">
+              <h5 class="card-title"> Yoga</h5>
+              <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
+              <p class="card-text">
+                <img src="img/yoga.png">
+              </p>
+            </div>
+          </a>
+          <a href="#" class="card text-center list-group-item-action border-light">
+            <div class="card-body">
+              <h5 class="card-title"> Cooking</h5>
+              <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
+              <p class="card-text">
+                <img src="img/chef.png">
+              </p>
+            </div>
+          </a>
+          <a href="#" class="card text-center list-group-item-action border-light">
+            <div class="card-body">
+              <h5 class="card-title"> Piano</h5>
+              <h6 class="card-subtitle mb-2 text-muted">5 Experts</h6>
+              <p class="card-text">
+                <img src="img/piano.png">
+              </p>
+            </div>
+          </a>
+          <a href="#" class="card text-center list-group-item-action border-light">
+            <div class="card-body">
+              <h5 class="card-title"> Singing</h5>
+              <h6 class="card-subtitle mb-2 text-muted">95 Experts</h6>
+              <p class="card-text">
+                <img src="img/microphone.png">
+              </p>
+            </div>
+          </a>
+          <a href="#" class="card text-center list-group-item-action border-light">
+            <div class="card-body">
+              <h5 class="card-title"> Drawing</h5>
+              <h6 class="card-subtitle mb-2 text-muted">45 Experts</h6>
+              <p class="card-text">
+                <img src="img/pencil.png">
+              </p>
+            </div>
+          </a>
+          <a href="#" class="card text-center list-group-item-action border-light">
+            <div class="card-body">
+              <h5 class="card-title"> Care</h5>
+              <h6 class="card-subtitle mb-2 text-muted">500 Experts</h6>
+              <p class="card-text">
+                <img src="img/care.png">
+              </p>
+            </div>
+          </a>
+        </div>
 
-      <a href="#" class="btn btn-outline-primary my-2">Explore More</a>
-
+        <a href="#" class="btn btn-outline-primary my-2">
+          <i class="fab fa-wpexplorer"></i> Explore More</a>
+      </div>
     </section>
 
     <section id="how-it-works">
@@ -170,50 +196,50 @@
           <div class="col-sm-4 col-lg-3 col-lg-offset-0 col-sm-offset-1">
             <article class="text-block">
               <header>
-                <img src="img/find-cl.28496fca3df3.svg" class="hiw-icon" alt="">
+                <img src="img/spy.png" alt="">
                 <hr>
               </header>
               <h3 data-qa="name" class="text-uppercase m-b-40">
                 FIND
               </h3>
-              <p data-qa="details" class="text-short">Post a job to tell us about your project. We'll quickly match you with the right freelancers.</p>
+              <p data-qa="details" class="text-short">Browse profiles, reviews, and proposals to find the expert best match for your topic.</p>
             </article>
           </div>
           <div class="m-b-80 col-sm-4 col-lg-3 col-lg-offset-0 col-sm-offset-2">
             <article class="text-block">
               <header>
-                <img src="img/hire-cl.febca6130d07.svg" class="hiw-icon" alt="">
+                <img src="img/human-resources.png" class="hiw-icon" alt="">
                 <hr>
               </header>
               <h3 data-qa="name" class="text-uppercase m-b-40">
                 HIRE
               </h3>
-              <p data-qa="details" class="text-short">Browse profiles, reviews, and proposals then interview top candidates. Hire a favorite and begin your project.</p>
+              <p data-qa="details" class="text-short">Contact, Schedule, Talk and Hire the favorite.</p>
             </article>
           </div>
           <div class="clearfix visible-sm visible-md"></div>
           <div class="m-b-80 col-sm-4 col-lg-3 col-lg-offset-0 col-sm-offset-1">
             <article class="text-block">
               <header>
-                <img src="img/work-cl.e7af5cc1a9b7.svg" class="hiw-icon" alt="">
+                <img src="img/online.png" class="hiw-icon" alt="">
                 <hr>
               </header>
               <h3 data-qa="name" class="text-uppercase m-b-40">
-                WORK
+                Learn
               </h3>
-              <p data-qa="details" class="text-short">Use the Upwork platform to chat, share files, and collaborate from your desktop or on the go.</p>
+              <p data-qa="details" class="text-short">Start private live sessions with your provider, ask questions, be awesome</p>
             </article>
           </div>
           <div class="m-b-80 col-sm-4 col-lg-3 col-lg-offset-0 col-sm-offset-2">
             <article class="text-block">
               <header>
-                <img src="img/pay-cl.ad4aee2d07ec.svg" class="hiw-icon" alt="">
+                <img src="img/handshake.png" class="hiw-icon" alt="">
                 <hr>
               </header>
               <h3 data-qa="name" class="text-uppercase m-b-40">
                 PAY
               </h3>
-              <p data-qa="details" class="text-short">Invoicing and payments happen through Upwork. With Upwork Protection, only pay for work you authorize.</p>
+              <p data-qa="details" class="text-short">Pay with our secured platform, be happy.</p>
             </article>
           </div>
           <div class="clearfix visible-sm visible-md"></div>
@@ -223,39 +249,67 @@
 
   </main>
   <!-- Main:End -->
-  <footer id="footer" class="container border-top">
+  <footer id="footer" class="container border-top py-5 mt-5">
     <div class="row">
       <div class="col-md-3">
         <a class="navbar-brand py-3" href="#">
           <img class="w-20" src="img/logo-grey.png" alt="talent nodes logo"> Live Masters
         </a>
-
+        <p class="blockquote-footer">&copy; 2018 Talent Hub Global Inc.</cite>
+        </p>
       </div>
       <div class="col-md-3">
         <h6>Company</h6>
-        <ul class="list-group-flush p-0">
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Morbi leo risus</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
+        <ul class="list-unstyled">
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="about.html">Terms of Service</a>
+          </li>
+          <li>
+            <a href="about.html">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="about.html">Trust & Safety</a>
+          </li>
+          <li>
+            <a href="about.html">Careers</a>
+          </li>
         </ul>
       </div>
       <div class="col-md-3">
         <h6>Support</h6>
-        <ul class="list-group-flush p-0">
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Morbi leo risus</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
+        <ul class="list-unstyled">
+          <li>
+            <a href="about.html">Contact Support</a>
+          </li>
+          <li>
+            <a href="about.html">User Handbook</a>
+          </li>
+          <li>
+            <a href="about.html">Provider Handbook</a>
+          </li>
+          <li>
+            <a href="about.html">How to Guide</a>
+          </li>
+          <li>
+            <a href="about.html">Blog</a>
+          </li>
+          <li>
+            <a href="about.html">Forum</a>
+          </li>
         </ul>
       </div>
       <div class="col-md-3">
-        <h6>Community</h6>
-        <ul class="list-group-flush p-0">
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Morbi leo risus</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
+        <h6>Explore</h6>
+        <ul class="list-unstyled">
+          <li>
+            <a href="about.html">Experts by Skill</a>
+          </li>
+          <li>
+            <a href="about.html">Topics</a>
+          </li>
         </ul>
       </div>
     </div>
