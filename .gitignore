@@ -2,3 +2,4 @@ node_modules/
 dist/
 nbproject/
 .vscode/
+.vscode/settings.json
