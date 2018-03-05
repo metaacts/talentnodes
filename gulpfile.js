@@ -97,6 +97,7 @@ gulp.task('watch', ['template', 'image', 'icon', 'font', 'sass', 'js'], function
         server: './' + buildPaths.root
     });
     gulp.watch(srcPaths.sassDir + '**/*.scss', ['sass']);
+    gulp.watch(srcPaths.cssDir + '**/*.css', ['sass']);
     gulp.watch(srcPaths.jsDir + '*.js', ['js']);
     gulp.watch(srcPaths.root + '**/*.html', ['template']);
     gulp.watch(srcPaths.imgDir + '**/*', ['image'])

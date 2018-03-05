@@ -9,35 +9,126 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/main.min.css">
 
-  <title>Profile</title>
+  <title>Dashboard</title>
+  <!-- Favicons && Device Icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ico/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
+  <header id="header" class="pt-5 mt-2">
+    <nav class="navbar navbar-expand-md fixed-top bg-bright border-bottom">
 
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Talent Hub</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+      <a class="navbar-brand" href="#">
+        <img class="w-20" src="img/logo.png" alt="talent nodes logo"> Live Masters
+      </a>
+      <input class="form-control-plaintext w-100" type="text" placeholder="Search" aria-label="Search">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarSupportedContent">
-        <button type="button" class="btn btn-outline-primary">Join</button>
-        <button type="button" class="btn btn-outline-secondary  mr-2">SingIn</button>
-      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarToggleContent">
+        <div class="navbar-nav">
+          <a href="#" class="nav-item btn btn-outline-dark ml-1 py-1 px-3">
+            <i class="fas fa-sign-in-alt"></i> SignOut</a>
+        </div>
+
     </nav>
   </header>
 
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">Album example</h1>
-      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-      <p>
-        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-      </p>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 pt-5 border-right">
+        <h6 class="dropdown-header pl-3 border-bottom text-uppercase">Sections</h6>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <i class="fab fa-windows"></i> Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-user"></i>
+              Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-calendar-check"></i>
+              Schedular
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-cogs"></i>
+              Preference
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-users"></i>
+              Clients
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-credit-card"></i>
+              Billing
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-clipboard"></i>
+              Reports
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fab fa-connectdevelop"></i>
+              Integrations
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <main role="main" class="col-lg-10 pt-4">
+
+      </main>
     </div>
-  </section>
+  </div>
+
+  <footer id="footer">
+    <div class="container-fluid border-top py-3 mt-5">
+      <div class="row">
+        <div class="col-md-3">
+          <a class="navbar-brand" href="#">
+            <img class="w-20" src="img/logo-grey.png" alt="talent nodes logo"> Live Masters
+          </a>
+
+        </div>
+        <div class="col-md-3 offset-md-6 text-right">
+          <p class="blockquote-footer">&copy; 2018 Talent Hub Global Inc.</cite>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- JavaScript -->
   <script src="js/main.min.js"></script>
