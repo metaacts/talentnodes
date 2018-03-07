@@ -1,11 +1,10 @@
-// file: custom.scss
+// Overrides 
 $body-bg: #EAECED;
-// Overrides
+
+// Includes
 @import "node_modules/bootstrap/scss/bootstrap";
 
-.w-20 {
-    width: 20%
-}
+// Customs
 .bg-bright {
     background: #fff
 }
